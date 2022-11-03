@@ -6,7 +6,7 @@ The purpose of this app is allow the user to easily see if they qualify for a lo
 ## Technologies
 This project was created with python v3.9.12.  It also uses the packages fire and questionary.
 
-[fire](https://google.github.io/python-fire/guide/ provides assistance with loading modules and calculators.
+[fire](https://google.github.io/python-fire/guide/) provides assistance with loading modules and calculators.
 
 [questionary](https://pypi.org/project/questionary/) improves the user experience by allowing dialogue.
 
