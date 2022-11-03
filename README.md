@@ -1,4 +1,4 @@
-# Loan Qualiferier App
+# Loan Qualifier App
 The purpose of this app is allow the user to easily see if they qualify for a loan based on information they provide.  That information will be cross referenced with our database of participating banks and their requirements for underwriting a loan.
 
 ---
