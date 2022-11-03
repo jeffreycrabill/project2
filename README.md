@@ -1,5 +1,5 @@
 # Loan Qualiferier App
-The purpose of this app is allow the user to easily see if they qualify for a loan based on information they provide.  That information will be cross referenced with our database of participating banks and their requirements for taking out a loan.
+The purpose of this app is allow the user to easily see if they qualify for a loan based on information they provide.  That information will be cross referenced with our database of participating banks and their requirements for underwriting a loan.
 
 ---
 
@@ -23,7 +23,9 @@ Be sure to have python, fire, and questionary installed before running the data.
 ## Usage
 To use this program, download the project2 file from the repository at (https://github.com/jeffreycrabill/project2), and run app.py in your bash terminal.  To access the bank data, type "./data/daily_rate_sheet.csv" when prompted.  The information provided will determine if there is an applicable loan.  If that is the case, you will be able to save the results.  
 
-![Loan App Image](Images/loan_app_image.png)
+![Loan App Image](images/loan_app_image.png)
+![Raw Code Image](images/raw_code.png)
+
 ---
 
 ## Contributors

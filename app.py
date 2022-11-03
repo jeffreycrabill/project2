@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 """Loan Qualifier Application.
 
 This is a command line application to match applicants with qualifying loans.
@@ -6,17 +6,20 @@ This is a command line application to match applicants with qualifying loans.
 Example:
     $ python app.py
 """
+# import libraries 
 import sys
 import fire
 import questionary
 from pathlib import Path
 
+# import data sets and calculators
 from qualifier.utils.fileio import load_csv, save_csv
 from qualifier.utils.calculators import (
     calculate_monthly_debt_ratio,
     calculate_loan_to_value_ratio,
 )
 
+# import filters
 from qualifier.filters.max_loan_size import filter_max_loan_size
 from qualifier.filters.credit_score import filter_credit_score
 from qualifier.filters.debt_to_income import filter_debt_to_income
@@ -24,7 +27,7 @@ from qualifier.filters.loan_to_value import filter_loan_to_value
 
 
 def load_bank_data():
-    """Ask for the file path to the latest banking data and load the CSV file.
+    """Ask for the file path to the latest banking data and load the CSV file.  It should be located in './data/daily_rate_sheet.csv'.
 
     Returns:
         The bank data from the data rate sheet CSV file.
@@ -96,16 +99,12 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
     bank_data_filtered = filter_debt_to_income(monthly_debt_ratio, bank_data_filtered)
     bank_data_filtered = filter_loan_to_value(loan_to_value_ratio, bank_data_filtered)
 
+    # Show the amount of qualifying loans
     if len(bank_data_filtered) >= 1:
         print(f"Found {len(bank_data_filtered)} qualifying loans")
+   # Or, if there are no qualifying loans, exit the program with a prompt
     if len(bank_data_filtered) < 1:
         sys.exit(f"Sorry, you do not qualify for any loans at this time.")
-
-    #if int({len(bank_data_filtered)}) < 1:
-        #sys.exit(f"Sorry, you do not qualify for any loans at this time.")
-    #if {len(bank_data_filtered)} < 1:
-        #sys.exit(f"Sorry, you do not qualify for any loans at this time.")
-
 
 
     return bank_data_filtered
@@ -117,21 +116,18 @@ def save_qualifying_loans(qualifying_loans):
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
-    # @TODO: Complete the usability dialog for savings the CSV Files.
     
+    # Ask user to save results
     user_answer = questionary.confirm("Would you like to save the results?").ask()
     if user_answer ==True:
         file_path = questionary.text("Enter File Name").ask()
         csvpath = ("./data/" + file_path + ".csv")
         save_csv(csvpath, qualifying_loans)
+   # If user does not wish to save, exit program with prompt
     if user_answer ==False:
         sys.exit("OK, have a nice day.")           
-            #else:
-                #sys.exit("Ok, have a nice day.")
-        #else:
-              #sys.exit("Sorry, there are no qualifying loans")
+           
     
-
 
 def run():
     """The main function for running the script."""
