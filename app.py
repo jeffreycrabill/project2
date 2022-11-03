@@ -118,7 +118,8 @@ def save_qualifying_loans(qualifying_loans):
         file_path = questionary.text("Enter File Name").ask()
         csvpath = ("./data/" + file_path + ".csv")
         save_csv(csvpath, qualifying_loans)
-                
+    if user_answer ==False:
+         sys.exit("OK, have a nice day.")           
             #else:
                 #sys.exit("Ok, have a nice day.")
         #else:
