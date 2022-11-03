@@ -1,0 +1,33 @@
+    1  cd coding_stuff
+    2  ls
+    3  cd project2
+    4  ls
+    5  python app.py
+    6  python app.py
+    7  history 50 > terminal_history.txt
+    8  git push
+    9  git push
+   10  git pull
+   11  git push
+   12  git push
+   13  git pull
+   14  git status
+   15  git add readme.md
+   16  git add .vscode/
+   17  git add app.py
+   18  git add data/
+   19  git add images/
+   20  git add qualifier/
+   21  git add terminal_history.txt
+   22  git push
+   23  git pull
+   24  git status
+   25  git add readme.md
+   26  git pull
+   27  git pull -f
+   28  git pull -f origin master
+   29  git push -f origin master
+   30  git status
+   31  git add readme.md
+   32  git status
+   33  history 50 > terminal_history.txt
