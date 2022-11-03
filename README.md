@@ -29,10 +29,10 @@ To use this program, download the project2 file from the repository at (https://
 ---
 
 ## Contributors
-Created by Jeffrey Crabill
-jeffreycrabill@gmail.com
-[twitter](twitter.com/jeffcrabill)
-[linkedIn](linkedin.com/jeffreycrabill)
+Created by Jeffrey Crabill  
+jeffreycrabill@gmail.com  
+[twitter](twitter.com/jeffcrabill)  
+[linkedIn](linkedin.com/jeffreycrabill)  
 
 ---
 
